@@ -8,10 +8,17 @@ spec:
     server: https://kubernetes.default.svc
   project: default
   source:
+<<<<<<< HEAD
      directory:
        exclude: 'service.yml'
           #      include: '{serviceaccount.yml,service.yml}'
           #      recurse: true
+=======
+    directory:
+      #exclude: 'service.yml'
+      #include: '{serviceaccount.yml,service.yml}'
+      recurse: true
+>>>>>>> c74970c (test)
     path: v03-argocd-applications/directoryOfmanifests
     repoURL: https://github.com/mostafabanaei2020/argocd-tutorial.git
     targetRevision: main
