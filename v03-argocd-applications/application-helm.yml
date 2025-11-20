@@ -14,8 +14,8 @@ spec:
       releaseName: application-from-helm
       valueFiles:
         - custom-values.yaml
-          #      values: |
-          #        replicaCount: 3
+      values: |
+        replicaCount: 10
           #      valuesObject:
           #        replicaCount: 5
           #      parameters:
