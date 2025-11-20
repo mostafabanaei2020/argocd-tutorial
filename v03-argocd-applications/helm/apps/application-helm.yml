@@ -21,6 +21,6 @@ spec:
       parameters:
         - name: "replicaCount"
           value: "3"
-    path: v03-argocd-applications/helm/nginx
+    path: v03-argocd-applications/helm
     repoURL: https://github.com/mostafabanaei2020/argocd-tutorial.git
     targetRevision: main
