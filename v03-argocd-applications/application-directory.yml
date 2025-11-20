@@ -4,14 +4,18 @@ metadata:
   name: application-directory
 spec:
   destination:
-    namespace: directory
+    namespace: dev
     server: https://kubernetes.default.svc
   project: default
   source:
     directory:
       #exclude: 'service.yml'
       #include: '{serviceaccount.yml,service.yml}'
-      recurse: true
+      #recurse: true
     path: v03-argocd-applications/directoryOfmanifests
     repoURL: https://github.com/mostafabanaei2020/argocd-tutorial.git
     targetRevision: main
+  syncPolicy:
+    automated: 
+      prune: true
+      selfHeal: true

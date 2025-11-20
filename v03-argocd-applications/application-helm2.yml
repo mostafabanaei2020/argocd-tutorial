@@ -1,17 +1,17 @@
 apiVersion: argoproj.io/v1alpha1
 kind: Application
 metadata:
-  name: application-from-scratch
+  name: application-project-default
 spec:
   destination:
-    namespace: helm
+    namespace: dev
     server: https://kubernetes.default.svc
   project: default
   source:
   # It's possible to override helm values through different ways such as "valueFiles", "values", "valuesObject" and "parameters". 
   # Values injections have the following order of precedence parameters > valuesObject > values > valueFiles > helm repository values.yaml Or rather
     helm:
-      releaseName: application-from-helm
+      releaseName: application-project-default
       valueFiles:
         - custom-values.yaml
       values: |
@@ -20,7 +20,8 @@ spec:
         replicaCount: 1
       parameters:
         - name: "replicaCount"
-          value: "3"
-    path: v03-argocd-applications/helm
+          value: "2"
+    path: v03-argocd-applications/helm/nginx
     repoURL: https://github.com/mostafabanaei2020/argocd-tutorial.git
+#    repoURL: https://github.com/devopshobbies/argocd-tutorial.git 
     targetRevision: main
