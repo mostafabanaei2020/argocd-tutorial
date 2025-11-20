@@ -4,7 +4,7 @@ metadata:
   name: application-from-scratch
 spec:
   destination:
-    namespace: default
+    namespace: helm
     server: https://kubernetes.default.svc
   project: default
   source:
