@@ -1,7 +1,7 @@
 apiVersion: v1
 kind: Service
 metadata:
-  name: nginx-2
+  name: nginx
   annotations:
         argocd.argoproj.io/sync-options: Replace=true
   labels:
